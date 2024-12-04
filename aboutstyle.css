@@ -1,0 +1,37 @@
+
+p{
+    text-align: center;
+    border: 2px solid lime;
+}
+
+
+h3, h2, ul, p{
+    color: lime; 
+}
+
+a>h1{
+    color: rgb(122, 255, 122); 
+    text-align: center;
+}
+
+main{
+    margin: 30px;
+    
+}
+
+#content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-evenly;
+}
+
+@media (max-width:600px){
+    h2{
+       color:white;
+    }
+    .nav-bar>h1{
+        color:white;
+    }
+}

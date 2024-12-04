@@ -1,0 +1,162 @@
+body{
+    padding: 0px;
+    margin: 0;
+   background-color: black;
+   box-sizing: border-box;
+}
+
+.header{
+    text-align: center;
+    color: cornflowerblue;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5vh;
+}
+
+a> h1{
+  margin: 0 auto;   
+  color: cornflowerblue;
+}
+
+
+h2{
+    margin:0;
+    color: royalblue;
+    font-size: 2em;
+}
+a{
+    text-decoration: none;
+}
+.nav-bar{
+display: flex;
+flex-direction: row;
+width: 100%;
+justify-content: space-around;
+z-index:1;
+}
+.nav-bar>h1{
+    display:none;
+}
+
+.img-grid{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    width: 60%;
+    grid-gap:5%  5%;
+    margin: 40px auto;
+    
+}
+img{
+    width:100%;
+}
+.img-grid-item{
+position:relative;
+}
+
+.overlay{
+    position:absolute;
+    display: flex;
+    align-items:center;
+    height: cover;
+    width: cover;
+    top:0;
+    bottom:0;
+    left: 0;
+    right:0;
+    color:white;
+    opacity:0;
+    transition: opacity 0.5s ease;
+    background-color: cornflowerblue;
+    text-align: center;
+    
+}
+.overlay:hover{
+    opacity:1;
+}
+
+
+
+/*Contact Page Specific Styling*/
+#contact{
+    display: flex;
+    width: 100 vw;
+    color:white;
+    margin: auto auto;
+    margin: 50px;
+    justify-content: space-evenly;
+}
+#computer{
+    display:flex;
+    align-items: top;
+    justify-content: center;
+    height: 100 vh;
+
+}
+#monitor{
+    position: relative;
+    z-index:.5;
+    width:400px;
+}
+#screen_gif{
+    position: absolute;
+    margin-top: 30px;
+    width: 220px;
+    }
+#text{
+    display: flex;
+    flex-direction: column;
+}
+/*Projects Page Specific Styling*/
+h3,p{
+    color: white;
+}
+.project_content{
+    margin: 30px;
+}
+.project_content>img{
+    width: 50;
+}
+#desc{
+    text-align: center;
+    margin: 40px;
+}
+
+/*Screen Size Responsiveness*/
+@media(min-width:601px){
+    .icon-container{
+        display: none;
+    }
+}
+
+@media (max-width:600px){
+    .nav-bar>h1{
+        display: block;
+        color:white;
+    }
+    h2{
+        color:white;
+    }
+    .nav-bar{
+        background-color: cornflowerblue;
+        position: absolute;
+        top: 0px;
+        flex-direction: column;
+        height: 100%;
+        color:white;
+        justify-content: center;
+        align-items: center;
+        transition: width 1s ease-out;
+        transition: width 1s ease-out, opacity 1s ease-out;
+    }
+    a{
+        color:white;
+    }
+.img-grid{
+    grid-template-columns: 100%;
+}
+#contact{
+    flex-direction: column;
+    align-items: center;
+}
+}
